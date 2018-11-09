@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function greetme() {
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            alert("Hello " + name + " " + surname + "!");
+        }
+    </script>
+</head>
+<body>
+    Imię: <input type="text" id="name"><br>
+    Nazwisko: <input type="text" id="surname"><br>
+    <button type="button" id="greetme" onclick="greetme()">Przywitaj mnie</button>
+</body>
+</html>

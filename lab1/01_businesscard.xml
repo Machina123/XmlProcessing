@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BusinessCard>
+    <name>Patryk Ciepiela</name>
+    <phone type="mobile">+48 [REDACTED]</phone>
+    <phone type="home">+48 [REDACTED]</phone>
+    <email>machina123@boun.cr</email> 
+    <workdata>
+        <position>Full-stack Developer</position>
+        <companyname>Machina Labs &#174;</companyname>
+    </workdata>
+    <address>
+        <streetname>[REDACTED]</streetname>
+        <housenum>13</housenum>
+        <postcode>[REDACTED]</postcode>
+        <city>[REDACTED]</city>
+        <country>Poland</country>
+    </address>
+</BusinessCard>

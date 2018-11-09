@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function show_element_info() {
+            var element = document.getElementById("myparagraph");
+            var el_id = element.id;
+            var el_tag = element.tagName;
+            var el_type = element.nodeType;
+
+            console.log(el_id, el_tag, el_type);
+        }
+
+        function show_doc_info() {
+            var doc_title = document.title;
+            var doc_url = document.URL;
+
+            console.log(doc_title, doc_url);
+        }
+
+        function change_content() {
+            var elem = document.getElementById("myparagraph");
+            elem.innerHTML = "Hello World! I was changed using JavaScript";
+        }
+    </script>
+</head>
+<body>
+    <p id="myparagraph">This is a paragraph</p>
+    <button id="element_info" onclick="show_element_info()">Show element info</button>
+    <button id="doc_info" onclick="show_doc_info()">Show document info</button>
+    <button id="change_content" onclick="change_content()">Change content</button>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<hotels>
+    <hotel id="1">
+        <name>Les Jardins du Marais</name>
+        <rating>3</rating>
+        <facilities>
+            <facility>Internet</facility>
+        </facilities>
+        <address>
+            <street_address>74 rue Amelot</street_address>
+            <postcode>75011</postcode>
+            <city>Paris</city>
+        </address>
+        <distance_from_center unit="km">2</distance_from_center>
+        <availability>True</availability>
+    </hotel>
+    <hotel id="2">
+        <name>Golden Tulip Little Palace</name>
+        <rating>4</rating>
+        <facilities>
+            <facility>Internet</facility>
+            <facility>Gym</facility>
+            <facility>Parking</facility>
+            <facility>Restaurant</facility>
+        </facilities>
+        <address>
+            <street_address>4 rue Salomon De Caus</street_address>
+            <postcode>75003</postcode>
+            <city>Paris</city>
+        </address>
+        <distance_from_center unit="km">0.1</distance_from_center>
+        <availability>False</availability>
+    </hotel>
+    <hotel id="3">
+        <name>Tilsitt Etoile</name>
+        <rating>2</rating>
+        <facilities>
+            <facility>Restaurant</facility>
+        </facilities>
+        <address>
+            <street_address>23 rue Brey</street_address>
+            <postcode>75017</postcode>
+            <city>Paris</city>
+        </address>
+        <distance_from_center unit="km">3</distance_from_center>
+        <availability>False</availability>
+    </hotel>
+    <hotel id="4">
+        <name>Hotel Saint Charles</name>
+        <rating>3</rating>
+        <facilities>
+            <facility>Parking</facility>
+        </facilities>
+        <address>
+            <street_address>6 rue de l'Esperance</street_address>
+            <postcode>75013</postcode>
+            <city>Paris</city>
+        </address>
+        <distance_from_center unit="km">1</distance_from_center>
+        <availability>True</availability>
+    </hotel>
+</hotels>
