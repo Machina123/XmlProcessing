@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Business Card</title>
+		<script>
+			function displayBusinessCardData() {
+				var xml = document.getElementById("xmldata1");
+				var bcard = xml.getElementsByTagName("BusinessCard")[0];
+				var name = bcard.getElementsByTagName("name")[0].firstChild.data;
+				var email = bcard.getElementsByTagName("email")[0].firstChild.data;
+				console.log(name, email);
+				var phones = bcard.getElementsByTagName("phone");
+				for(var i=0; i<phones.length; i++) {
+					var phone = phones[i];
+					console.log(phone.getAttribute("type") + ": " + phone.firstChild.nodeValue);
+				}
+			}
+
+			function printBCardData() {
+				if(document.getElementById("bcarddata") != null) return;
+
+				var mydiv = document.createElement("div");
+				mydiv.setAttribute("id", "bcarddata");
+				var xml = document.getElementById("xmldata1");
+				var bcard = xml.getElementsByTagName("BusinessCard")[0];
+				var name = bcard.getElementsByTagName("name")[0].firstChild.data;
+				var email = bcard.getElementsByTagName("email")[0].firstChild.data;
+				
+				var _h_name = document.createElement("h1");
+				_h_name.innerText = name;
+				mydiv.appendChild(_h_name);
+
+				var _h_email = document.createElement("h2");
+				_h_email.innerText = "E-mail: " + email;
+				mydiv.appendChild(_h_email);
+
+				var phones = bcard.getElementsByTagName("phone");
+				var _h_phones = document.createElement("p");
+				_h_phones.innerHTML = "Phone numbers: <br>";
+				for(var i=0; i<phones.length; i++) {
+					var phone = phones[i];
+					_h_phones.innerHTML += phone.getAttribute("type") + ": " + phone.firstChild.nodeValue + "<br>";
+				}
+				mydiv.appendChild(_h_phones);
+
+				document.body.appendChild(mydiv);
+			}
+
+			function hideBCardData() {
+				if(document.getElementById("bcarddata") == null) return;
+				var bcarddata = document.getElementById("bcarddata");
+				bcarddata.parentNode.removeChild(bcarddata);
+			}
+		</script>
+	</head>
+
+	<body>
+		<xml id="xmldata1" style="display:none">	
+			<BusinessCard>
+				<name>Jozef Kapusta</name>
+				<phone type="mobile">(+421) 904 105 847 </phone>
+				<phone type="home">(+421) 38 5 619 473 </phone>
+				<phone type="work">(+421) 37 6 587 953 </phone>
+				<email>jozo@mojmail.sk<email>
+			</BusinessCard>
+		</xml>
+		<button id="showBCardData" onclick="displayBusinessCardData()">Log Business Card Data to console</button>
+		<button id="printBCardData" onclick="printBCardData()">Show Business Card Data on page</button>
+		<button id="hideBCardData" onclick="hideBCardData()">Hide Business Card Data</button>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<div id="demo"></div>
+		<script>
+			var output = document.getElementById("demo");
+			
+			var text, parser, xmlDoc;
+			text = "<airplanes><plane>" +
+			"<plane_name>Airbus A340</plane_name>" +
+			"<made_in>France</made_in>" +
+			"<seats>295</seats>" +
+			"</plane>"+
+			"<plane>"+
+			"<plane_name>Boeing 747</plane_name>"+
+			"<made_in>USA</made_in>"+
+			"<seats>587</seats></plane></airplanes";
+
+			parser = new DOMParser();
+			xmlDoc = parser.parseFromString(text,"text/xml");
+			
+			var plane1data = xmlDoc.getElementsByTagName("plane")[0];
+			var plane2data = xmlDoc.getElementsByTagName("plane")[1];
+
+			output.innerHTML = plane1data.childNodes[0].firstChild.nodeValue + ": made in " + plane1data.childNodes[1].firstChild.nodeValue + ", capacity " + plane1data.childNodes[2].firstChild.nodeValue + "<br>";
+			output.innerHTML += plane2data.childNodes[0].firstChild.nodeValue + ": made in " + plane2data.childNodes[1].firstChild.nodeValue + ", capacity " + plane2data.childNodes[2].firstChild.nodeValue;
+		</script>
+	</body>
+</html> 

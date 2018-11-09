@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var books;
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+                // Safari for macOS workaround, success status is 0
+                // in other browsers should also check for this.status==200
+                if (this.readyState == 4) { 
+                    getBooksData(this);
+                }
+            };
+
+            // will not work in Chrome locally because of CORS policy
+            xhttp.open("GET", "04_books.xml", true);
+            xhttp.send();
+
+            function getBooksData(xml) {
+                var output = document.getElementById("demo");
+                var xmlDoc = xml.responseXML;
+                books = xmlDoc.getElementsByTagName("book");
+                var bsNode = xmlDoc.createElement("bestseller");
+                books[0].appendChild(bsNode);
+                
+                var serializer = new XMLSerializer();
+                output.innerText = serializer.serializeToString(xmlDoc);
+            }
+        </script>
+    </body>
+</html>
