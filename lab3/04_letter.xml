@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="04_letter_style.css"?> 
+<letter>
+	<date>December 11, 2002</date>
+	<addressee>
+		<name>Melvile Dewey</name>
+		<address_one>Columbia University</address_one>
+		<address_two>New York, NY</address_two>
+	</addressee>
+	<greeting>Dear Melvile,</greeting>
+	<paragraph>
+I have been reading your ideas concerning nature of librarianship, and
+<italics>I find them very intriguing</italics>. I would love the
+opportunity to discuss with you the role of the card catalog in today's
+libraries considering the advent to World Wide Web. Specifically, how
+are things like Google and Amazon.com changing our patrons' expectations
+of library services? Mr. Cutter and I will be discussing these ideas at
+the next Annual Meeting, and we are available at the follow dates/times:
+	</paragraph>
+	<list>
+		<item>Monday, 2-4</item>
+		<item>Tuesday, 3-5</item>
+		<item>Thursday, 1-3</item>
+	</list>
+	<paragraph>We hope you can join us.</paragraph>
+	<closing>Sincerely, S. R. Ranganathan</closing>
+</letter>

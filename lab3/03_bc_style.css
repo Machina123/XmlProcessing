@@ -1,8 +1,13 @@
 @charset "utf-8";
 
 BusinessCard {
-    display:block;
-    margin-bottom: 32px;
+    display: block;
+    margin: 20px;
+    border: 1px solid #bbb;
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    background-color: #eee;
 }
 
 BusinessCard > * {
@@ -12,6 +17,8 @@ BusinessCard > * {
 BusinessCard > name {
     font-size: 16pt;
     color: #f00;
+    font-weight: bold;
+    padding-bottom: 8px;
 }
 
 BusinessCard > phone {
@@ -19,7 +26,24 @@ BusinessCard > phone {
     font-size: 12pt;
 }
 
+BusinessCard > phone[type=mobile] {
+    text-decoration: underline;
+}
+
+BusinessCard > phone::before {
+    content: attr(type) ": ";
+}
+
+BusinessCard > phone[primary]::after {
+    content: " (" attr(primary) ")";
+}
+
+BusinessCard > email::before {
+    content: "e-mail: ";
+}
+
 BusinessCard > email {
+    padding-top: 8px;
     color: #747;
     font-size: 11pt;
 }
