@@ -62,9 +62,18 @@
 			}
 		}
 		
+		function saveDocument() {
+			var xmlString = new XMLSerializer().serializeToString(xmlDoc);
+			var retXML = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" + xmlString;
+			var newWnd = window.open("", "_blank");
+			newWnd.document.clear();
+			newWnd.document.write(retXML);
+			newWnd.document.close();
+		}
+
 		</script>
         <div id="demo"></div>
         <button onClick="show()">Show</button>
-        
+        <button onClick="saveDocument()">Save document</button>
 	</body>
 </html> 

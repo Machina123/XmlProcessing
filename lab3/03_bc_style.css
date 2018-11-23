@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+BusinessCard {
+    display:block;
+    margin-bottom: 32px;
+}
+
+BusinessCard > * {
+    display: block;
+}
+
+BusinessCard > name {
+    font-size: 16pt;
+    color: #f00;
+}
+
+BusinessCard > phone {
+    color: #00f;
+    font-size: 12pt;
+}
+
+BusinessCard > email {
+    color: #747;
+    font-size: 11pt;
+}
