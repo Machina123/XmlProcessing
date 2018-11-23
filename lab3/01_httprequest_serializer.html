@@ -18,7 +18,8 @@
 
     function myFunction(xml) {
         var books = xml.responseXML;
-        
+
+        // dodawanie rzeczy do struktury XML
         var bsNode = books.createElement("bestseller");
         var newText = books.createTextNode("yes");
         bsNode.appendChild(newText);
@@ -31,6 +32,20 @@
         editionNode.appendChild(editionText);
 
         elements[elements.length - 1].appendChild(editionNode);
+        
+        // zmiana wartości węzła
+        var prices = books.getElementsByTagName("price");
+        prices[0].childNodes[0].nodeValue = "10000";
+
+        // ustawianie atrybutów
+        elements[0].setAttribute("category", "food");
+        
+        // usuwanie elementu ze struktury XML
+        var toRemove = books.getElementsByTagName("book")[0];
+        books.documentElement.removeChild(toRemove)
+        
+        // można też tak:
+        // elements[0].parentNode.removeChild(elements[0]);
         
         var serializer = new XMLSerializer();
         var xmlString = serializer.serializeToString(books);

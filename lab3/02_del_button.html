@@ -1,0 +1,70 @@
+<html>
+	<body>
+		<script>
+			var text, parser, xmlDoc;
+			text = '<bookstore>'+
+
+'<book category="cooking">'+
+ ' <title lang="en">Everyday Italian</title>'+
+  '<author>Giada De Laurentiis</author>'+
+ ' <year>2005</year>'+
+ ' <price>30.00</price>'+
+'</book>'+
+
+'<book category="children">'+
+ ' <title lang="en">Harry Potter</title>'+
+ ' <author>J K. Rowling</author>'+
+ ' <year>2005</year>'+
+  '<price>29.99</price>'+
+'</book>'+
+
+'<book category="web">'+
+ ' <title lang="en">XQuery Kick Start</title>'+
+ ' <author>James McGovern</author>'+
+ ' <year>2003</year>'+
+ ' <price>49.99</price>'+
+'</book>'+
+
+'<book category="web" cover="paperback">'+
+ ' <title lang="en">Learning XML</title>'+
+ ' <author>Erik T. Ray</author>'+
+ ' <year>2003</year>'+
+ ' <price>39.95</price>'+
+'</book>'+
+
+'</bookstore>';
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(text,"text/xml");
+		var bookList;
+
+		function removeBook(elem) {
+			bookList = xmlDoc.getElementsByTagName("book");
+			var toRemove = bookList[elem.getAttribute("data-elemnum")];
+			toRemove.parentNode.removeChild(toRemove);
+			show();
+		}
+			
+		function show(){
+			var output = document.getElementById("demo");
+			output.innerHTML = "";
+			bookList = xmlDoc.getElementsByTagName("book");
+			console.log(bookList);
+			for(var i = 0; i < bookList.length; i++) {
+				var titleElem = document.createElement("span");
+				titleElem.innerText = bookList[i].children[0].childNodes[0].nodeValue;
+				output.appendChild(titleElem);
+				var delButtonElem = document.createElement("button")
+				delButtonElem.setAttribute("data-elemnum", i);
+				delButtonElem.innerText = "Delete";
+				delButtonElem.setAttribute("onClick", "removeBook(this)");
+				output.appendChild(delButtonElem);
+				output.innerHTML += "<br>";
+			}
+		}
+		
+		</script>
+        <div id="demo"></div>
+        <button onClick="show()">Show</button>
+        
+	</body>
+</html> 
