@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    function openXHR() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+            myFunction(this);
+            }
+        };
+        xhttp.open("GET", "01_books.xml", true);
+        xhttp.send();
+    }
+
+    function myFunction(xml) {
+        var books = xml.responseXML;
+        
+        var bsNode = books.createElement("bestseller");
+        var newText = books.createTextNode("yes");
+        bsNode.appendChild(newText);
+
+        var elements = books.getElementsByTagName("book");
+        elements[0].appendChild(bsNode);
+
+        var editionNode = books.createElement("edition");
+        var editionText = books.createTextNode("second");
+        editionNode.appendChild(editionText);
+
+        elements[elements.length - 1].appendChild(editionNode);
+        
+        var serializer = new XMLSerializer();
+        var xmlString = serializer.serializeToString(books);
+
+        alert(xmlString);
+    }
+
+    window.addEventListener("load", openXHR, false);
+</script>
+
+</body>
+</html> 
