@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="02_airplanes_style.css"?>
+<airplanes>
+
+<plane category="passenger_plane">
+  <name made_in="France">Airbus A380 900</name>
+  <passengers_capacity>900</passengers_capacity>
+  <travel_range>15000</travel_range>
+</plane>
+
+<plane category="passenger_plane">
+  <name made_in="USA">Boeing 747 8</name>
+  <passengers_capacity>700</passengers_capacity>
+  <travel_range>12400</travel_range>
+</plane>
+
+<plane category="passenger_plane">
+  <name made_in="USA">Boeing 777 300</name>
+  <passengers_capacity>550</passengers_capacity>
+  <travel_range>11135</travel_range>
+</plane>
+
+<plane category="passenger_plane">
+  <name made_in="France">Airbus A340 600</name>
+  <passengers_capacity>420</passengers_capacity>
+  <travel_range>14350</travel_range>
+</plane>
+
+</airplanes>

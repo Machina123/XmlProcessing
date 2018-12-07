@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+bookstore {
+    display: table;
+    border: 1px solid black;
+}
+
+book {
+    display: table-row;
+}
+
+title, author, year, price {
+    display: table-cell;
+    padding: 4px 4px;
+    border: 1px solid black;
+}

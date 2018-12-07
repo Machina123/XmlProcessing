@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+airplanes {
+    display: table;
+    border: 1px solid black;
+}
+
+plane {
+    display: table-row;
+}
+
+plane:first-child {
+    font-weight: bold;
+    font-size: larger;
+}
+
+name, passengers_capacity, travel_range {
+    display: table-cell;
+    padding: 4px 4px;
+    border: 1px solid black;
+}
+
+name[made_in="USA"] {
+    color: red;
+}
+
+name[made_in="France"] {
+    color: blue;
+}
