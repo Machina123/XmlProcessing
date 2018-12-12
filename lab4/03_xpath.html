@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4) {
+        // readSingleElem(this);
+        readMultipleElements(this);
+    }
+};
+xhttp.open("GET", "01_books.xml", true);
+xhttp.send();
+
+    // czyta pojedynczy element na podstawie ścieżki XPath
+function readSingleElement(xml) {
+    var books = xml.responseXML;
+    var path = "/bookstore/book[2]/title";
+    var result = books.evaluate(path, books, null, XPathResult.STRING_TYPE, null).stringValue;
+    console.log(result);
+}
+
+    // czyta wszystkie znalezione elementy na podstawie podanej ścieżki XPath
+function readMultipleElements(xml) {
+    var books = xml.responseXML;
+    var path = "/bookstore/book/title";
+    var nodes = books.evaluate(path, books, null, XPathResult.ANY_TYPE, null);
+    while(result = nodes.iterateNext()) {
+        console.log(result.childNodes[0].nodeValue);
+    }
+}
+
+</script>
+
+
+<div id="result"></div>
+</body>
+</html> 

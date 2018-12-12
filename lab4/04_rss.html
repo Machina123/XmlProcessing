@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var RSS_ADDR = "http://rss.nytimes.com/services/xml/rss/nyt/Soccer.xml";
+
+        function onLoad() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // readSingleElem(this);
+                    getNews(this);
+                }
+            };
+            xhttp.open("GET", RSS_ADDR, true);
+            xhttp.send();
+        }
+        
+        function getNews(xhr) {
+            var news = xhr.responseXML;
+            var path = "//item";
+            var nodes = news.evaluate(path, news, null, XPathResult.ANY_TYPE, null);
+            while(result = nodes.iterateNext()) {
+                // console.log(result.childNodes[0].nodeValue);
+
+                var element = document.createElement("div");
+                element.style.marginLeft = "20px";
+                console.log(result.querySelector("title"));
+                element.innerHTML = "<h3>" + result.querySelector("title").childNodes[0].nodeValue + "</h3><p style='margin-left: 20px;'>" + result.querySelector("description").childNodes[0].nodeValue + "<br><a href='" + result.querySelector("link").childNodes[0].nodeValue + "'>Read more</a></p>";
+                document.getElementById("result").appendChild(element);
+            }
+        }
+
+        window.addEventListener("load", onLoad, false);
+    </script>
+</head>
+<body>
+    <h1>Latest news from NY Times:</h1>
+    <div id="result">
+
+    </div>
+</body>
+</html>

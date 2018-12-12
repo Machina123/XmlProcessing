@@ -27,3 +27,7 @@ name[made_in="USA"] {
 name[made_in="France"] {
     color: blue;
 }
+
+name::before {
+    content: "\2708";
+}
