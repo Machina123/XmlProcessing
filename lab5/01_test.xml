@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="01_test_xslt.xslt" ?>
+<book>
+    Learning XML
+</book>
