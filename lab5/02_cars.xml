@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="02_cars_2.xslt"?>
+
+<cars>
+	<car category="SUV">
+  		<name>BMW X6</name>
+  		<made_in>Germany</made_in>
+  		<color>white</color>
+  		<photo>https://hobbylandbg.com/media/catalog/product/cache/2/image/350x397/9df78eab33525d08d6e5fb8d27136e95/n/o/norev-118-bmw-x6m-2016.jpg</photo>
+	</car>
+
+	<car category="sport">
+  		<name>Lamborghini Espada Rosso Granada</name>
+    	<made_in>Italy</made_in>
+  		<color>red</color>
+ 		<photo>https://hobbylandbg.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/4/74503a2.jpg</photo>
+	</car>
+
+	<car category="sport">
+  		<name>Porsche 356 B Cabriolet 1961</name>
+  		<made_in>Germany</made_in>
+  		<color>black</color>
+ 		<photo>https://hobbylandbg.com/media/catalog/product/cache/2/image/350x397/9df78eab33525d08d6e5fb8d27136e95/7/7/77864_1.jpg</photo>
+	</car>
+
+	<car category="roadster">
+  		<name>Lamborghini Murcielago Roadster</name>
+  		<made_in>Italy</made_in>
+    	<color>black</color>
+		<photo>https://hobbylandbg.com/media/catalog/product/cache/2/image/350x397/9df78eab33525d08d6e5fb8d27136e95/4/0/400103930-01.jpg</photo>
+	</car>
+
+
+	<car category="roadster">
+  		<name>Porsche Carrera GT Silver</name>
+  		<made_in>Germany</made_in>
+      	<color>silver</color>
+	<photo>http://diecastking.com/original/porsche-carrera-gt-silver-1-18-diecast-model-car-by-motormax-73163s.jpg</photo>
+	</car>
+
+</cars>

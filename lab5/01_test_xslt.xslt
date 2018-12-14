@@ -7,6 +7,7 @@
             </head>
             <body>
                 <img src="01_book.jpg" />
+                <h1><xsl:value-of select="text()" /></h1>
             </body>
         </html>
     </xsl:template>
