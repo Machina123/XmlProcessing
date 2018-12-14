@@ -14,8 +14,12 @@
                                 <xsl:attribute name="style">
                                     <xsl:choose>
                                         <xsl:when test="@category='SUV'">color: green;</xsl:when>
-                                        <xsl:when test="@category='sport'">color: red;</xsl:when>
-                                        <xsl:otherwise>color: orange;</xsl:otherwise>
+                                        <xsl:when test="@category='sport'">
+                                            color: red;
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            color: orange;
+                                        </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:attribute>
                                 <xsl:value-of select="name" /> (<xsl:value-of select="made_in" />)
