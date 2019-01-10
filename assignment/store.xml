@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="store_style.xslt"?>
 <!DOCTYPE phonestore SYSTEM "store.dtd">
 <phonestore>
     <phone type="smartphone">
