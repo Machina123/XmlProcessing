@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE phonestore SYSTEM "store.dtd">
+<phonestore>
+    <phone type="smartphone">
+        <make>Samsung</make>
+        <model known-as="SM-N960F">Galaxy Note9</model>
+        <image>https://image.samsung.com/pl/smartphones/galaxy-note9/images/galaxy-note9_overview_kv_type1_m.png</image>
+        <price currency="pln">4299</price>
+        <stock warehouse="internal">10</stock>
+    </phone>
+    <phone type="clamshell">
+        <make>Motorola</make>
+        <model known-as="V3">RAZR V3</model>
+        <image>https://files.mgsm.pl/phones/motorola-razr-v3/motorola-razr-v3-01.jpg</image>
+        <price currency="eur">199</price>
+        <stock warehouse="internal">3</stock>
+    </phone>
+    <phone type="slider">
+        <make>Nokia</make>
+        <model>N97</model>
+        <image>https://files.mgsm.pl/phones/nokia-n97/nokia-n97-03.jpg</image>
+        <price currency="usd">299</price>
+        <stock warehouse="external">5</stock>
+    </phone>
+    <phone type="smartphone">
+        <make>Apple</make>
+        <model known-as="A1921">iPhone XS Max</model>
+        <image>https://files.mgsm.pl/phones/apple-iphone-xs-max/apple-iphone-xs-max-01.jpg</image>
+        <price currency="usd">1099</price>
+        <stock warehouse="internal">20</stock>
+    </phone>
+    <phone type="smartphone">
+        <make>Samsung</make>
+        <model known-as="SM-G935F">Galaxy S7 Edge</model>
+        <image>https://files.mgsm.pl/phones/samsung-galaxy-s7-edge/samsung-galaxy-s7-edge-05.jpg</image>
+        <price currency="eur">599</price>
+        <stock warehouse="external">10</stock>
+    </phone>
+</phonestore>

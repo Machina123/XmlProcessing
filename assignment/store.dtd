@@ -1,0 +1,12 @@
+<!ENTITY author "Patryk Ciepiela">
+<!ELEMENT phonestore (phone+)>
+<!ELEMENT phone (make,model,image,price,stock)>
+<!ATTLIST phone type (smartphone|slider|clamshell) #REQUIRED>
+<!ELEMENT make (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT stock (#PCDATA)>
+<!ATTLIST model known-as CDATA #IMPLIED>
+<!ATTLIST price currency (pln|eur|usd) "pln">
+<!ATTLIST stock warehouse (internal|external) "internal">
