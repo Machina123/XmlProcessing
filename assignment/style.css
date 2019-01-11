@@ -1,0 +1,23 @@
+body {
+    padding-top: 1em;
+    background-color: #EEE;
+}
+
+.card {
+    margin-bottom: 16px;
+}
+
+.smartphone {
+    background-color: rgba(22,127,251,0.5);
+    color: white;
+}
+
+.clamshell {
+    background-color: rgba(48,165,71,0.5);
+    color: white;
+}
+
+.slider {
+    background-color: rgba(217,55,73,0.5);
+    color: white;
+}

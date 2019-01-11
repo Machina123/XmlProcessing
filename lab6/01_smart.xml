@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="01_smart_style.xslt" ?>
+<smart>
+	<tablets>
+		<tablet category="action" link="https://www.alza.sk/huawei-mediapad-t3-space-grey-d4982148.htm">
+			<name>Huawei MediaPad T3 8.0 Space Grey</name>
+  			<screen_size>8</screen_size>
+  			<ram>2</ram>
+ 	 		<color>black</color>
+			<procesor>Quad Core 1.4GHz</procesor>
+		</tablet>
+		<tablet category="top" link="https://www.alza.sk/lenovo-tab-3-7-essential-16gb-ebony-d4877851.htm">
+			<name>Lenovo TAB 3 7 Essential 16 GB Ebony </name>
+  			<screen_size>7</screen_size>
+  			<ram>1</ram>
+ 	 		<color>black</color>
+			<procesor>Quad Core 1.3GHz</procesor>
+		</tablet>
+		<tablet category="action" link="https://www.alza.sk/samsung-galaxy-tab-a-10-1-wifi-cierny-d4254260.htm">
+			<name>Samsung Galaxy Tab A 10.1 WiFi</name>
+  			<screen_size>10.1</screen_size>
+  			<ram>2</ram>
+ 	 		<color>black</color>
+			<procesor>Octu Core 1,6 GHz</procesor>
+		</tablet>
+		<tablet category="top" link="https://www.alza.sk/asus-zenpad-10-1-z301m-modry-d5101271.htm">
+			<name>ASUS Zenpad 10.1 (Z301M) </name>
+  			<screen_size>10</screen_size>
+  			<ram>2</ram>
+ 	 		<color>black</color>
+			<procesor> Quad Core 1.3GHz</procesor>
+		</tablet>
+	</tablets>
+
+	<phones>
+		<phone category="top" link="https://www.alza.sk/iphone-6-32gb-space-gray-d4925509.htm">
+			<name>iPhone 6 32GB Space</name>
+  			<screen_size>4,7</screen_size>
+  			<ram>1</ram>
+ 	 		<color>white</color>
+			<procesor>M8</procesor>
+		</phone>
+		<phone category="action" link="https://www.alza.sk/xiaomi-redmi-4x-lte?dq=4831322">
+			<name>Xiaomi Redmi 4X LTE 32GB </name>
+  			<screen_size>5</screen_size>
+  			<ram>3</ram>
+ 	 		<color>pink</color>
+			<procesor>Octa Core 1.4GHz</procesor>
+		</phone>
+		<phone category="action" link="https://www.alza.sk/samsung-galaxy-s7-zlaty-d5111434.htm">
+			<name>Samsung Galaxy S7</name>
+  			<screen_size>5,1</screen_size>
+  			<ram>4</ram>
+ 	 		<color>pink</color>
+			<procesor>Samsung Exynos 8890 Octa Core 64bit</procesor>
+		</phone>
+	</phones>
+</smart>
