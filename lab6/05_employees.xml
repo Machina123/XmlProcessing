@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<employees>
+<companyname>School Ltd.</companyname>
+ <employee>
+  <id>101</id>
+  <name>Fridrich Fernandez</name>
+  <designation>Manager</designation>
+ </employee>
+
+ <employee>
+  <id>102</id>
+  <name>John Leicer</name>
+  <designation>Executive</designation>
+ </employee>
+
+ <employee>
+  <id>103</id>
+  <name>Mark Lucas</name>
+  <designation>Executive</designation>
+ </employee>
+ 
+ <employee>
+  <id>104</id>
+  <name>Veronica Lavuelsika</name>
+  <designation>Executive</designation>
+ </employee>
+</employees>
