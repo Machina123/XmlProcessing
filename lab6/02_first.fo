@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <fo:layout-master-set>
+        <fo:simple-page-master master-name="hello" page-height="29.7cm" page-width="21cm" margin-top="1cm" margin-bottom="1cm" margin-left="1cm" margin-right="1cm">
+            <fo:region-body margin-top="1in" margin-bottom=".5in" />
+            <fo:region-before extent="2.5cm" background-color="silver" />
+            <fo:region-after extent="2.5cm" background-color="silver" />
+        </fo:simple-page-master>
+    </fo:layout-master-set>
+    <fo:page-sequence master-reference="hello">
+        <fo:static-content flow-name="xsl-region-before">
+            <fo:block font-size="10pt" text-align="left">My beautiful XSL-FO generated PDF file</fo:block>
+        </fo:static-content>
+        <fo:static-content flow-name="xsl-region-after">
+            <fo:block font-size="10pt" text-align="right">page: one of at least one</fo:block>
+        </fo:static-content>
+        <fo:flow flow-name="xsl-region-body">
+            <fo:block font-size="24pt" text-align="center" font-weight="bold" font-family="Helvetica" space-before="1cm">
+        Hello World!
+      </fo:block>
+            <fo:block font-size="14pt" space-before="1cm" space-after="1cm" text-align="justify">
+          Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries. Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme. Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign. Reading is easier, too, in the new Reading view. You can collapse parts of the document and focus on the text you want. If you need to stop reading before you reach the end, Word remembers where you left off - even on another device. Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar.
+      </fo:block>
+            <fo:block font-size="16pt" space-before="1cm" space-after="1cm" color="red" text-align="right">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim.
+      </fo:block>
+        </fo:flow>
+    </fo:page-sequence>
+</fo:root>
