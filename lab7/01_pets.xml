@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pets [
+    <!ELEMENT pets (pet*)>
+    <!ELEMENT pet (name, age, type, color)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT type (#PCDATA)>
+    <!ELEMENT color (#PCDATA)>
+]>
+<pets>
+	<pet>
+		<name>Tilly</name>
+		<age>14</age>
+		<type>cat</type>
+		<color>silver</color>
+	</pet>
+	<pet>
+		<name>Amanda</name>
+		<age>10</age>
+		<type>dog</type>
+		<color>brown</color>
+	</pet>
+	<pet>
+		<name>Blake</name>
+		<age>12</age>
+		<type>dog</type>
+		<color>blue</color>
+	</pet>
+</pets>
