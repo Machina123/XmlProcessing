@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BusinessCards [
+    <!ELEMENT BusinessCards (BusinessCard+)>
+    <!ELEMENT BusinessCard (name, phone+, email)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ATTLIST phone type (mobile|home|work) #REQUIRED>
+    <!ATTLIST phone primary (primary) #IMPLIED>
+]>
+<BusinessCards>
+	<BusinessCard>
+		<name>Alan Mamoney</name>
+		<phone type="mobile" primary="primary">(+418) 904 105 847 </phone>
+		<phone type="home">(+800) 38 5 619 473 </phone>
+		<phone type="work">(+510) 37 6 587 953 </phone>
+		<email>alan@mamoney.com</email>
+	</BusinessCard>
+	<BusinessCard>
+		<name>Someone Else</name>
+		<phone type="mobile">(+420) 478 547 214 </phone>
+		<phone type="home">(+808) 741 852 963 </phone>
+		<phone type="work" primary="primary">(+513) 369 258 147 </phone>
+		<email>someone_else@gmail.com</email>
+	</BusinessCard>
+</BusinessCards>
