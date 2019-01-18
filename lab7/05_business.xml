@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<BusinessCard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="05_business_schema.xsd">
+		<phone type="mobile">(+418) 904 105 847 </phone>
+		<phone type="home">(+800) 38 5 619 473 </phone>
+		<phone type="work">(+510) 37 6 587 953 </phone>
+		<email>alanmamoney.com</email>
+	</BusinessCard>
+
+

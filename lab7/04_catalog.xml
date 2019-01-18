@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- Importowanie zewnętrznego DTD -->
+<!-- Uwaga: nazwy elementów, atrybutów i ich wartości w DTD są case-sensitive! -->
 <!DOCTYPE CATALOG SYSTEM "04_catalog.dtd">
+
 <CATALOG>
     <PRODUCT>
         <SPECIFICATIONS WEIGHT="10">My spec #1</SPECIFICATIONS>
