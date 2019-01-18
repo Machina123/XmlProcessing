@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE letter SYSTEM "03_letter.dtd">
+<letter>
+    <date>17 January 2019</date>
+    <addressee>
+        <name>Casey Neistat</name>
+        <address_one>368 Broadway</address_one>
+        <address_two>New York, NY 10013, USA</address_two>
+    </addressee>
+    <greeting>Dear Casey</greeting>
+    <paragraph>I would like to join 368. Please accept. I have a certain set of skills:</paragraph>
+    <list>
+        <item>using a Mac</item>
+        <item>held a camera in my hands once</item>
+    </list>
+    <closing>Sincerely, me.</closing>
+</letter>

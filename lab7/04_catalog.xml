@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Importowanie zewnętrznego DTD -->
+<!DOCTYPE CATALOG SYSTEM "04_catalog.dtd">
+<CATALOG>
+    <PRODUCT>
+        <SPECIFICATIONS WEIGHT="10">My spec #1</SPECIFICATIONS>
+        <SPECIFICATIONS>My spec #2</SPECIFICATIONS>
+        <OPTIONS FINISH="Matte" CASE="NotApplicable">My options</OPTIONS>
+        <PRICE CURRENCY="USD">1000</PRICE>
+    </PRODUCT>
+
+    <PRODUCT>
+        <SPECIFICATIONS WEIGHT="100">Second product spec #1</SPECIFICATIONS>
+        <OPTIONS FINISH="Metal" CASE="HardShell">Options numero duo</OPTIONS>
+        <PRICE CURRENCY="USD">2500</PRICE>
+        <PRICE CURRENCY="USD" SHIPPING="yes">2650</PRICE>
+        <NOTES>Deliver ASAP</NOTES>
+    </PRODUCT>
+</CATALOG>
