@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+   		var response = 	this.responseText;
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(response, "text/xml");
+		var output = "Current weather in <strong>"
+		+ xmlDoc.getElementsByTagName("city")[0].childNodes[0].nodeValue
+		+ "</strong>:<br>Temperature: <strong>"
+		+ xmlDoc.getElementsByTagName("temp")[0].childNodes[0].nodeValue
+		+ "</strong>&deg;C, humidity: <strong>"
+        + xmlDoc.getElementsByTagName("humidity")[0].childNodes[0].nodeValue
+		+ "</strong>%<br>Description: "
+        + xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+
+		document.getElementById("demo").innerHTML = output;
+    }
+};
+// To rozwiązanie jest mocno przekminione, ale uniwersalne
+function getWeather(event) {
+	var city = event.srcElement.getAttribute("data-city");
+	xmlhttp.open("GET", "http://jozefkapusta.teacher.sk/rest/xml_weather.php?city=" + city, true);
+	xmlhttp.send();
+}
+
+function documentReady() {
+	var buttons = document.querySelectorAll(".greet");
+	buttons.forEach(function(elem, key, parent) {
+		elem.addEventListener("click", getWeather, false);
+	})
+}
+
+window.addEventListener("load", documentReady, false);
+</script>
+</head>
+<body>
+	Show weather in:
+<button class="greet" data-city="Krakow">Krakow</button>
+<button class="greet" data-city="New+York">New York</button>
+<button class="greet" data-city="Tokyo">Tokyo</button>
+<button class="greet" data-city="Rio+de+Janeiro">Rio de Janeiro</button>
+<button class="greet" data-city="Sydney">Sydney</button>
+<button class="greet" data-city="Johannesburg">Johannesburg</button>
+<button class="greet" data-city="Warsaw">Warsaw</button>
+<br>
+<p id="demo"></p>
+
+
+</body>
+</html>

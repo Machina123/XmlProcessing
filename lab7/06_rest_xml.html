@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+   		var response = 	this.responseText;
+		parser = new DOMParser();
+		xmlDoc = parser.parseFromString(response, "text/xml");
+		var output = "Language: <strong>"
+		+ xmlDoc.getElementsByTagName("language")[0].childNodes[0].nodeValue
+		+ "</strong><br>Greeting: <strong>"
+		+ xmlDoc.getElementsByTagName("text")[0].childNodes[0].nodeValue
+		+ "</strong>";
+
+		document.getElementById("demo").innerHTML = output;
+    }
+};
+// To rozwiązanie jest mocno przekminione, ale uniwersalne
+function getGreeting(event) {
+	var lang = event.srcElement.getAttribute("data-lang");
+	xmlhttp.open("GET", "http://jozefkapusta.teacher.sk/rest/xml_powitanie.php?lang=" + lang, true);
+	xmlhttp.send();
+}
+
+function documentReady() {
+	var buttons = document.querySelectorAll(".greet");
+	buttons.forEach(function(elem, key, parent) {
+		elem.addEventListener("click", getGreeting, false);
+	})
+}
+
+window.addEventListener("load", documentReady, false);
+</script>
+</head>
+<body>
+	Show greeting in:
+<button class="greet" data-lang="pl">Polish</button>
+<button class="greet" data-lang="en">English</button>
+<button class="greet" data-lang="cz">Czech</button>
+<button class="greet" data-lang="sk">Slovak</button>
+<button class="greet" data-lang="de">German</button>
+<button class="greet" data-lang="fr">French</button>
+<button class="greet" data-lang="sp">Spanish</button><br>
+<p id="demo"></p>
+
+
+</body>
+</html>
