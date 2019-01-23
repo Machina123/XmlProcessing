@@ -3,6 +3,7 @@
     <xsl:template match="/">
         <html>
             <head>
+                <meta charset="utf-8">
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
                 <link rel="stylesheet" type="text/css" href="style.css" />
                 <title>MachiPhones.net</title>
